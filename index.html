@@ -1,78 +1,235 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Indigenous Populations and Mental Health in Canada</title>
-    <style>
-        body {
-            font-family: "Helvetica", sans-serif;
-            background-color: white;
-            margin: 40px;
-        }
-        h1, h2, h6 {
-            text-align: center;
-            color: black;
-        }
-        iframe {
-            display: block;
-            margin: 0 auto 60px auto;
-            border: none;
-        }
-        .parts {
-            margin-bottom: 60px;
-        }
-        p {
-            text-align: center;
-            color: darkslategrey;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>DATA303 Final Project Elizabeth Bocock and Sasha Kovtun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      font-family: "Cambria", sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background-color: #f9fafb;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    header {
+      background: #111827;
+      color: whitesmoke;
+      padding: 1.5rem 1.5rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    header p {
+      margin: 0.4rem 0 0;
+      max-width: 60rem;
+      font-size: 0.95rem;
+      color: whitesmoke;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+      background: #ffffff;
+      border-radius: 0.75rem;
+      box-shadow: 0 8px 16px rgba(15, 23, 42, 0.06);
+      padding: 1.5rem;
+    }
+
+    section h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      border-bottom: 1px solid whitesmoke;
+      padding-bottom: 0.4rem;
+    }
+
+    .viz-wrapper {
+      margin-top: 1rem;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid whitesmoke;
+      background: #f9fafb;
+    }
+
+   
+
+    iframe {
+      display: block;
+      width: 100%;
+      border: none;
+    }
+
+    .caption {
+      font-size: 0.85rem;
+      color: steelblue;
+      margin-top: 0.5rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 800px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+      header {
+        padding: 1rem;
+      }
+      main {
+        padding: 1rem;
+      }
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: grey;
+      padding: 1.5rem 1rem 2rem;
+    }
+
+    a {
+      color: slateblue;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>An Analysis of Global Economic Data: GDP, Unemployment, and Tourism</h1>
+    <p>
+      (We can change the title or add another small overview here)
+    </p>
+  </header>
 
-    <h1>Indigenous Populations and Mental Health in Canada</h1>
-    <h6>By Sasha Kovtun, DATA 303 Section 02</h6>
-    
-    <div class="parts">
-        <h2>Part 1: Proportion of Indigenous Populations in Canada</h2>
-        <iframe src="donut.html" width="800" height="700"></iframe>
-    </div>
+  <main>
+    <!-- INTRO SECTION -->
+    <section id="intro">
+      <h2>Overview</h2>
+      <p>
+        Our project aims to explore global tourism data and how it affects global unemployment,
+comparing countries with high levels of GDP with their amount of international tourist arrivals,
+inflation rates, unemployment rates, and other important economic attributes of interest. We
+gathered a dataset from Kaggle (which assembled several datasets from the World Bank focusing
+on international tourist arrivals per country, GDP and inflation rates per country, and tourism
+expenditures, among other variables). We noticed that this dataset included lots of missing data,
+especially in the years following the COVID-19 pandemic. We counted the number of missing
+data per year, and decided that the 2013-2015 range had the least amount of missing data for the
+most amount of countries possible. Our preprocessing involved filtering the data to only include
+countries that had data for all three of our focus years and getting rid of data about general
+geographic regions while only keeping country data. After preprocessing our data, we started to
+take note of outliers. Greece, for example, has the highest unemployment rate in our filtered
+version of the data, but their other factors (inflation, GDP, and tourism arrivals) do not seem to
+match the county’s high unemployment. To answer the question of why exactly Greece had such
+high unemployment between 2013-2015, we will do a deeper dive into its government spending
+and the differences between the male and female unemployment rates.
+      </p>
+      <p>
+        [we can add more content in here later]]
+      </p>
+    </section>
 
+    <!-- GLOBAL STATIC VIZ SECTION (PLOTLY PNGs) -->
+    <section id="global-viz">
+      <h2>Global Economic Patterns</h2>
+      <div class="two-column">
+        <div>
+          <p>
+            These static visualizations summarize
+            global economic trends across countries such as GDP, the unemployment rate by country,
+            and inflation rate.
+          </p>
+          <p>
+            [insert more analysis here]
+          </p>
+        </div>
+        <div>
+          <div class="viz-wrapper">
+            <!-- TODO: update src to your actual PNG path in the repo, e.g. img/global_scatter.png -->
+            <img src="img/global_plotly_viz_1.png" alt="Global economic visualization created in Plotly" />
+          </div>
+          <p class="caption">
+            [insert descrption]
+          </p>
 
-    <div class="parts">
-        <h2>Part 2: Distribution of Indigenous Populations Across Canada</h2>
-        <p>In general, Indigenous populations are concentrated in the northernmost territories in Canada <br>
-            (Nunavut, Yukon, and the Northwest Territories.) Despite having a small population size overall, <br>
-            the Inuit peoples make up the majority of the population in Nunavut, being 85% of the population. <br>
-            Indigenous people also make up 51% of the population in the Northwest Territories.<br>
-            Métis people and people of the First Nations primarily live in the southern territories of Canada, <br>
-            while the majority of Inuit people live  in the north. Of course, Nunavut is the territory where most Inuit <br>
-            people live, while Quebec and Ontario are the areas where most First Nations people live, and the majority <br>
-            of Métis people live in Alberta and Ontario.<br><br></p>
-        <iframe src="map.html" width="900" height="700"></iframe>
-    </div>
+          <div class="viz-wrapper" style="margin-top: 1rem;">
+            <!-- TODO: update src to another PNG or remove if you only have one -->
+            <img src="img/global_plotly_viz_2.png" alt="Additional global economic visualization created in Plotly" />
+          </div>
+          <p class="caption">
+            [insert descrption].
+          </p>
+        </div>
+      </div>
+    </section>
 
+    <!-- TABLEAU INTERACTIVE CHOROPLETH SECTION -->
+    <section id="greece-viz">
+      <h2>International Tourism by Country, Inflation Rate, and Unemployment Rate </h2>
+      <p>
+        [insert instructions for users about how to use this map, such as how the tooltip works, ]
 
-    <div class="parts">
-        <h2>Part 3: Mental Health and Food Insecurity</h2>
-        <p>1. In general, for both sexes, a smaller percent of non-indigenous people reported having poor mental health <br>
-            than indigenous populations. One notable population that experiences a high percentage of poor mental health is <br>
-            the First Nations population, and this trend is consistent for both sexes. Overall, a smaller percentage of males <br>
-            tends to self-report having poor mental health than females.<br>
-            2. A similar trend follows for percentages of the Canadian population that experiences food insecurity. The Inuit <br>
-            population experiences the largest proportion of those who struggle with food insecurity, and males have a slightly <br>
-            higher self-reported rate of food insecurity.<br>
-            3. This relationship that the scatterplot for both sexes suggests is that non-indigenous groups struggle less with <br>
-            both mental health and food insecurity since a smaller percentage self-reported experiencing these issues.  <br>
-                   This scatterplot for self-reporting males alone shows clusters based on population group, while the relationships <br>
-                   for female population groups are more scattered. This suggests women have self-reported more varying rates of <br>
-                   poor mental health and food insecurity than men.</p>
-        <iframe src="scatter.html" width="900" height="700"></iframe>
-    </div>
+      </p>
 
-    <div class="parts">
-        <h2>Part 5: Donut Subplots about the Top 3 Territories with the Higest Percentage of Indigenous Populations</h2>
-        <iframe src="subplots.html" width="900" height="700"></iframe>
-    </div>
+      <div class="viz-wrapper">
+        <!-- 
+          TODO: replace the src below with the embed URL from Tableau Public.
+          In Tableau Public, click "Share" → copy the <iframe> and paste it here.
+          It will look something like:
 
+          https://public.tableau.com/views/YourWorkbookName/ChoroplethMap?:showVizHome=no&:embed=true
+        -->
+        <iframe
+          title="Interactive Choropleth Map showing global economic data with Greece highlighted"
+          src="https://public.tableau.com/views/DataVizProj_17651542163630/CloroplethMap?:showVizHome=no&:embed=true"
+          width="100%"
+          height="700"
+          scrolling="no"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <p class="caption">
+        [insert another description]
+      </p>
+    </section>
+
+    <!-- DISCUSSION / TAKEAWAYS -->
+    <section id="takeaways">
+      <h2>Key Takeaways</h2>
+      <p>
+        [insert description]
+      </p>
+      <p>
+        [insert]]
+      </p>
+      <ul>
+        <li>[-]</li>
+        <li>[-]</li>
+        <li>[-]</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    DATA 303 Final Project by Elizabeth Bocock and Sasha Kovtun
+  </footer>
 </body>
 </html>
