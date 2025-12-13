@@ -25,16 +25,10 @@ inflation rates, unemployment rates, and other important economic attributes of 
           the amount of GDP generated from tourism and other industries relying on the amount of spending money 
           people have, and housing prices. In the several years that followed, many countries were able to stabilize their
           economies by increasing government spending, lowering interest rates, and implementing tax cuts.<sup><a href="https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath"><cite>[1]</cite></a></sup>
-          
-          We gathered a dataset from Kaggle (which assembled several datasets from the World Bank focusing
-on international tourist arrivals per country, GDP and inflation rates per country, and tourism
-expenditures, among other variables). We noticed that this dataset included lots of missing data,
-especially in the years following the COVID-19 pandemic. We counted the number of missing
-data per year, and decided that the 2013-2015 range had the least amount of missing data for the
-most amount of countries possible. Our preprocessing involved filtering the data to only include
-countries that had data for all three of our focus years and getting rid of data about general
-geographic regions while only keeping country data. After preprocessing our data, we started to
-take note of outliers. Greece, for example, has the highest unemployment rate in our filtered
+          <br>
+          We gathered a dataset which included global economic factors collected from the World Bank, focusing
+on international tourist arrivals per country, GDP, and inflation rates per country. After preprocessing our data, we started to
+take note of outliers; Greece, for example, has the highest unemployment rate in our filtered
 version of the data, but their other factors (inflation, GDP, and tourism arrivals) do not seem to
 match the county’s high unemployment. To answer the question of why exactly Greece had such
 high unemployment between 2013-2015, we will do a deeper dive into its government spending
