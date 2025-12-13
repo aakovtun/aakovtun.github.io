@@ -3,131 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <title>DATA303 Final Project Elizabeth Bocock and Sasha Kovtun</title>
+  <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    :root {
-      font-family: "Cambria", sans-serif;
-      line-height: 1.5;
-      color: #1f2933;
-      background-color: #f9fafb;
-    }
-
-    body {
-      margin: 0;
-    }
-
-    header {
-      background: #111827;
-      color: whitesmoke;
-      padding: 1.5rem 1.5rem 1rem;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-
-    header p {
-      margin: 0.4rem 0 0;
-      max-width: 60rem;
-      font-size: 0.95rem;
-      color: whitesmoke;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 1.5rem;
-    }
-
-    section {
-      margin-bottom: 2.5rem;
-      background: #ffffff;
-      border-radius: 0.75rem;
-      box-shadow: 0 8px 16px rgba(15, 23, 42, 0.06);
-      padding: 1.5rem;
-    }
-
-    section h2 {
-      margin-top: 0;
-      font-size: 1.4rem;
-      border-bottom: 1px solid whitesmoke;
-      padding-bottom: 0.4rem;
-    }
-
-    .viz-wrapper {
-      margin-top: 1rem;
-      border-radius: 0.75rem;
-      overflow: hidden;
-      border: 1px solid whitesmoke;
-      background: #f9fafb;
-    }
-
-   
-
-    iframe {
-      display: block;
-      width: 100%;
-      border: none;
-    }
-
-    .caption {
-      font-size: 0.85rem;
-      color: steelblue;
-      margin-top: 0.5rem;
-    }
-
-    .two-column {
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
-      gap: 1.5rem;
-    }
-
-    @media (max-width: 800px) {
-      .two-column {
-        grid-template-columns: 1fr;
-      }
-      header {
-        padding: 1rem;
-      }
-      main {
-        padding: 1rem;
-      }
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: grey;
-      padding: 1.5rem 1rem 2rem;
-    }
-
-    a {
-      color: slateblue;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
 </head>
 <body>
   <header>
-    <h1>An Analysis of Global Economic Data: GDP, Unemployment, and Tourism</h1>
-    <p>
-      (We can change the title or add another small overview here)
+    <h1 style="text-align: center;">An Analysis of Global Economic Data: GDP, Unemployment, and Tourism</h1>
+    <p style="text-align: right;">
+      —————— By Elizabeth Bocock and Sasha Kovtun ——————
     </p>
   </header>
 
   <main>
     <!-- INTRO SECTION -->
     <section id="intro">
-      <h2>Overview</h2>
-      <p>
-        Our project aims to explore global tourism data and how it affects global unemployment,
+      <h2 style="text-align: center;">Overview</h2>
+        <h3 style="text-align: center;">Our project aims to explre global tourism data and how it affects global unemployment,
 comparing countries with high levels of GDP with their amount of international tourist arrivals,
-inflation rates, unemployment rates, and other important economic attributes of interest. We
-gathered a dataset from Kaggle (which assembled several datasets from the World Bank focusing
+inflation rates, unemployment rates, and other important economic attributes of interest.</h3> 
+        <p>The 2008 Economic crisis caused global macroeconomic shocks, affecting unemployment rates, 
+          the amount of GDP generated from tourism and other industries relying on the amount of spending money 
+          people have, and housing prices. In the several years that followed, many countries were able to stabilize their
+          economies by increasing government spending, lowering interest rates, and implementing tax cuts.<sup><a href="https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath"><cite>[1]</cite></a></sup>
+          
+          We gathered a dataset from Kaggle (which assembled several datasets from the World Bank focusing
 on international tourist arrivals per country, GDP and inflation rates per country, and tourism
 expenditures, among other variables). We noticed that this dataset included lots of missing data,
 especially in the years following the COVID-19 pandemic. We counted the number of missing
@@ -141,61 +40,16 @@ match the county’s high unemployment. To answer the question of why exactly Gr
 high unemployment between 2013-2015, we will do a deeper dive into its government spending
 and the differences between the male and female unemployment rates.
       </p>
-      <p>
-        [we can add more content in here later]]
-      </p>
-    </section>
-
-    <!-- GLOBAL STATIC VIZ SECTION (PLOTLY PNGs) -->
-    <section id="global-viz">
-      <h2>Global Economic Patterns</h2>
-      <div class="two-column">
-        <div>
-          <p>
-            These static visualizations summarize
-            global economic trends across countries such as GDP, the unemployment rate by country,
-            and inflation rate.
-          </p>
-          <p>
-            [insert more analysis here]
-          </p>
-        </div>
-        <div>
-          <div class="viz-wrapper">
-            <!-- TODO: update src to your actual PNG path in the repo, e.g. img/global_scatter.png -->
-            <img src="img/global_plotly_viz_1.png" alt="Global economic visualization created in Plotly" />
-          </div>
-          <p class="caption">
-            [insert descrption]
-          </p>
-
-          <div class="viz-wrapper" style="margin-top: 1rem;">
-            <!-- TODO: update src to another PNG or remove if you only have one -->
-            <img src="img/global_plotly_viz_2.png" alt="Additional global economic visualization created in Plotly" />
-          </div>
-          <p class="caption">
-            [insert descrption].
-          </p>
-        </div>
-      </div>
     </section>
 
     <!-- TABLEAU INTERACTIVE CHOROPLETH SECTION -->
     <section id="greece-viz">
-      <h2>International Tourism by Country, Inflation Rate, and Unemployment Rate </h2>
+      <h2>Let's Explore How the Global Economic Factors of <i>International Tourism by Country, <br> Inflation Rate,</i> and <i>Unemployment Rate</i> Are Connected.</h2>
       <p>
-        [insert instructions for users about how to use this map, such as how the tooltip works, ]
-
+        The following map shows data from a select list of countries who contributed to our selected dataset over our entire chosen time period of interest (2013-2015).
       </p>
 
       <div class="viz-wrapper">
-        <!-- 
-          TODO: replace the src below with the embed URL from Tableau Public.
-          In Tableau Public, click "Share" → copy the <iframe> and paste it here.
-          It will look something like:
-
-          https://public.tableau.com/views/YourWorkbookName/ChoroplethMap?:showVizHome=no&:embed=true
-        -->
         <iframe
           title="Interactive Choropleth Map showing global economic data with Greece highlighted"
           src="https://public.tableau.com/views/DataVizProj_17651542163630/CloroplethMap?:showVizHome=no&:embed=true"
@@ -207,16 +61,80 @@ and the differences between the male and female unemployment rates.
       </div>
 
       <p class="caption">
-        [insert another description]
+        Hover over a country of interest to explore more details about its unemployment rate, inflation rate, and number of international tourist arrivals. <br>
+        This interactive map presents data as a timeseries, and users are encouraged to explore the changes in datas between different years by using the slider or dropdown menu.
       </p>
+      <br>
     </section>
 
-    <!-- DISCUSSION / TAKEAWAYS -->
+    <!-- GLOBAL ECONOMIC TRENDS SECTION (PLOTLY GRAPHS, PLOTS) -->
+    <section id="global-viz">
+      <h2>A Further Analysis of Global Economic Patterns Helps Us Identify Outliers</h2>
+      <div class="img">
+        <div>
+          <p>
+            This interactive timeseries bubble scatterplot shows how the unemployment rate in each country from our dataset changed between 
+            2013 and 2015. The size of each bubble is representative of the size of the respective country's GDP. <br>
+            <b>Press the play button or use the slider to explore the differences in relationships between international tourism arrivals and unemployment rate by year.</b>
+          </p>
+        
+        </div>
+        <div>
+          <div class="viz-wrapper">
+            <!-- TODO: Figure out how to incorporate Elizabeth's interactive Plotly scatterplot -->
+            <img src="img/global_plotly_viz_1.png" alt="Global economic scatterplot" />
+          </div>
+          <p class="caption">
+            [An interactive scatterplot created using Plotly.]
+          </p>
+            <p>
+            This Parallel Coordinates Plot (PCP) helps us analyze which countries had extreme percent change in various economic indicators. 
+            Greece is not shown very prominently on this plot because its initial unemployment rate in 2013 was already quite high. This 
+            lead us to investigate other variables as to why their unemployment rate remained so steadily high for our identified time period.
+          </p>
+          <div class="viz-wrapper" style="margin-top: 1rem;">
+            <!-- TODO: UPDATE TO THE NEW IMAGE WITH UPDATES AXES :'D -->
+            <img src="images/globaleconomicpcp.png" alt="PCP visualization created in Plotly" />
+          </div>
+          <p class="caption">
+            [A Parallel Coordinates Plot, or PCP. *we must update this to reflect the new axes, this is just a placeholder image.]
+          </p>
+        </div>
+        <h2>Let's examine other factors in Greece that have led to high unemployment and slow economic growth.</h2>
+      </div>
+    </section>
+
+
+    <section id="Greece">
+      <h1>A Case Study Of Greece: Education, Government Expenditure, and Human Capital</h1>
+      <h2>Higher Education in Greece and How This May Affect Unemployment Rate Through Human Capital</h2>
+      <p>Throughout the 2000's, Greece had a notably high youth unemployment rate, peaking at 58.5% in 2013.<sup><a href="https://data.worldbank.org/indicator/SL.UEM.1524.ZS?locations=GR"><cite>[2]</cite></a></sup>
+        Educational attainment is measured as the number of individuals aged 15–64 with tertiary education, meaning they have earned an associate's degree or higher (ISCED levels 5–8).<sup><a href="https://ec.europa.eu/eurostat/databrowser/view/lfst_r_lfsd2pop__custom_19322330/default/table"><cite>[3]</cite></a></sup>
+        While this measure does not isolate the variable of youth education specifically, it helps us analyze regional human capital and labor market conditions 
+        that influence employment opportunities for young people. We interpret this variable as an important factor in our background context for Greece's 
+        possible higher youth unemployment causes rather than a direct measure of youth skills. </p>
+      <div class="viz-wrapper">
+        <iframe
+          title="Interactive Choropleth Map showing Number of Individuals (in Thousands, aged 15-64) who attained Tertiary (college or beyond) Education by NUTS-2 Region in Greece"
+          src="https://public.tableau.com/views/DataVizProj_17651542163630/TertiaryEducationLevelsbyRegion?:showVizHome=no&:embed=true"
+          width="100%"
+          height="700"
+          scrolling="no"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div>
+        <!--INSERT MORE OF ELIZABETH'S PLOTS HERE :D (and more analysis too)-->
+        <h3>Work in progress: more Greece plots coming soon!</h3>
+      </div>
+    </section>
+
+    <!--  KEY TAKEAWAYS -->
     <section id="takeaways">
-      <h2>Key Takeaways</h2>
-      <p>
-        [insert description]
-      </p>
+      <h2>So What Does All Of This Mean?</h2>
+      <h3>
+        Despite having a modertaely high amount of international tourism arrivals for a country of its size, Greece experienced economic hardship due to ongoing factors from the 2008 Economic Crisis.
+      </h3>
       <p>
         [insert]]
       </p>
@@ -225,6 +143,17 @@ and the differences between the male and female unemployment rates.
         <li>[-]</li>
         <li>[-]</li>
       </ul>
+    </section>
+    
+    <!-- BIBLIOGRAPHY/CITE SECTION (it seems like he might be requiring us to do this part)-->
+  <section id="bibliography">
+      <h2>Bibliography and Works Cited</h2>
+      <p>
+        <sup><a href="https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath"><cite>[1]</cite></a></sup> Weinberg, John. “The Great Recession and Its Aftermath.” Fedhistory, 2025, <br> www.federalreservehistory.org/essays/great-recession-and-its-aftermath.<br>
+        <sup><a href="https://data.worldbank.org/indicator/SL.UEM.1524.ZS?locations=GR"><cite>[2]</cite></a></sup> “Unemployment, youth total (% of total labor force ages 15-24) (modeled ILO estimate) - Greece.” World Bank Open Data, 2025, data.worldbank.org/indicator/SL.UEM.1524.ZS?locations=GR.<br>
+        <sup><a href="https://ec.europa.eu/eurostat/databrowser/view/lfst_r_lfsd2pop__custom_19322330/default/table"><cite>[3]</cite></a></sup> EUROSTAT DATA. "Population in private households by educational attainment level and NUTS 2 region." <br> https://ec.europa.eu/eurostat/databrowser/view/lfst_r_lfsd2pop__custom_19322330/default/table<br>
+        
+      </p>
     </section>
   </main>
 
