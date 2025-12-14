@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -19,26 +18,30 @@
     <section id="intro">
       <h2 style="text-align: center;">Overview</h2>
         <h3 style="text-align: center;">Our project aims to explre global tourism data and how it affects global unemployment,
-comparing countries with high levels of GDP with their amount of international tourist arrivals,
-inflation rates, unemployment rates, and other important economic attributes of interest.</h3> 
+          comparing countries with high levels of GDP with their amount of international tourist arrivals,
+          inflation rates, unemployment rates, and other important economic attributes of interest.</h3> 
         <p>The 2008 Economic crisis caused global macroeconomic shocks, affecting unemployment rates, 
           the amount of GDP generated from tourism and other industries relying on the amount of spending money 
           people have, and housing prices. In the several years that followed, many countries were able to stabilize their
           economies by increasing government spending, lowering interest rates, and implementing tax cuts.<sup><a href="https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath"><cite>[1]</cite></a></sup>
           <br>
           We gathered a dataset which included global economic factors collected from the World Bank, focusing
-on international tourist arrivals per country, GDP, and inflation rates per country. After preprocessing our data, we started to
-take note of outliers; Greece, for example, has the highest unemployment rate in our filtered
-version of the data, but their other factors (inflation, GDP, and tourism arrivals) do not seem to
-match the county’s high unemployment. To answer the question of why exactly Greece had such
-high unemployment between 2013-2015, we will do a deeper dive into its government spending
-and the differences between the male and female unemployment rates.
-      </p>
+          on international tourist arrivals per country, GDP, and inflation rates per country. After preprocessing our data, we started to
+          take note of outliers; Greece, for example, has the highest unemployment rate in our filtered
+          version of the data, but their other factors (inflation, GDP, and tourism arrivals) do not seem to
+          match the county’s high unemployment. To answer the question of why exactly Greece had such
+          high unemployment between 2013-2015, we will do a deeper dive into its government spending
+          and the differences between the male and female unemployment rates.
+      </p><br>
+      <h2 style="color: navy;"> Research Question: What structural and macroeconomic factors shaped Greece’s prolonged unemployment crisis between 2013 and 2015, and how did these factors disproportionately affect youth across regions?</h4>
+      <h4>To help answer this question, we combine a broader context of long-run macroeconomic data for Greece between the years of 1971–2025 with regional (NUTS-2) data on educational attainment and youth unemployment. 
+        Using a mix of correlation analysis, interactive visualizations, and regional mapping, we analyze the 2013–2015 crisis within both historical and geographic context.</h5>
+      <p>While our analysis does not establish causality, it provides descriptive and contextual evidence that helps explain why youth unemployment persisted unevenly across regions, even as some aggregate indicators stabilized.</p>
     </section>
 
     <!-- TABLEAU INTERACTIVE CHOROPLETH SECTION -->
     <section id="greece-viz">
-      <h2>Let's Explore How the Global Economic Factors of <i>International Tourism by Country, <br> Inflation Rate,</i> and <i>Unemployment Rate</i> Are Connected.</h2>
+      <h2>First, Let's Explore How the Global Economic Factors of <i>International Tourism by Country, <br> Inflation Rate,</i> and <i>Unemployment Rate</i> Are Connected.</h2>
       <p>
         The following map shows data from a select list of countries who contributed to our selected dataset over our entire chosen time period of interest (2013-2015). This interactive map presents data as a timeseries, and users are encouraged to explore the changes in data between different years by using the slider or dropdown menu.
       </p>
@@ -110,7 +113,7 @@ and the differences between the male and female unemployment rates.
 
 
     <section id="Greece">
-      <h1>A Case Study Of Greece: Education, Government Expenditure, and Human Capital</h1>
+      <h1 style="text-align: center;">A Case Study Of Greece: Education, Government Expenditure, and Human Capital</h1>
       <h2>Higher Education in Greece and How This May Affect Unemployment Rate Through Human Capital</h2>
       <p>Throughout the 2000's, Greece had a notably high youth unemployment rate, peaking at 58.5% in 2013.<sup><a href="https://data.worldbank.org/indicator/SL.UEM.1524.ZS?locations=GR"><cite>[2]</cite></a></sup>
         Educational attainment is measured as the number of individuals aged 15–64 with tertiary education, meaning they have earned an associate's degree or higher (ISCED levels 5–8).<sup><a href="https://ec.europa.eu/eurostat/databrowser/view/lfst_r_lfsd2pop__custom_19322330/default/table"><cite>[3]</cite></a></sup>
