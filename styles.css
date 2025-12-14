@@ -70,12 +70,35 @@ img {
   color: steelblue;
   margin-top: 0.5rem;
 }
+.plotly-heatmap {
+  height: 55vh;
+  max-height: 520px;
+}
 
 .two-column {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
   gap: 1.5rem;
 }
+
+/* we had to find how to make a scale class specifically for the heatmap because it refused to fit to the screen */
+.scale-50 {
+  width: 100%;
+  height: 700px;          
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+}
+
+/* this helps with keeping the iframe embed of the heatmap html file to be smaller */
+.scale-50 iframe {
+  width: 200%;
+  height: 200%;
+  transform: scale(0.8);
+  transform-origin: 0 0;
+  border: none;
+}
+
 
 @media (max-width: 1000px) {
   .two-column {
@@ -86,6 +109,14 @@ img {
   }
   main {
     padding: 1rem;
+  }
+}
+
+@media (max-height: 800px) {
+  .plotly-frame {
+    height: 60vh;
+    max-height: 500px;
+    max-width:500px;
   }
 }
 
